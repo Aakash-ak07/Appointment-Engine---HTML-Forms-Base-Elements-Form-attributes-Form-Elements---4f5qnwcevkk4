@@ -1,9 +1,7 @@
-
 const con = require("./connector");
 const { slot_data,data } = require('./data')
 
 const refreshAll = async () => {
-
     await con.query("DROP TABLE IF EXISTS events, user;",
         (err, result) => {
             if (err) {
